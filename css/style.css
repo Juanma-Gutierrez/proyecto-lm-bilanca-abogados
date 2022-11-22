@@ -1,3 +1,7 @@
+/* 
+Proyecto 1er trimestre Lenguaje de Marcas
+*/
+
 :root {
     --purple: #28233e;
     --orange: #fe9000;
@@ -19,13 +23,50 @@
     src: url(../fonts/DavidLibre-Medium.ttf);
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: Main;
+/* GENERAL SETTINGS */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
+/* ********** General ********** */
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: var(--purple);
+}
+.button {
+    border-radius: 50px;
+    box-shadow: inset 0 0 var(--orange);
+    background-color: var(--orange);
+    cursor: pointer;
+    font-family: Subtitle;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.button:hover {
+    box-shadow: 0px 0px 15px var(--blue2);
+    background-color: var(--purple);
+    color: var(--blue2);
+
+}
+
+/* ********** Header ********** */
 .header {
     display: flex;
     flex-direction: row;
@@ -34,35 +75,168 @@
     background-color: var(--purple);
     color: var(--blue2);
 }
-
+.header-info {
+    display: flex;
+    justify-content: space-between;
+}
 .header-info span {
-    padding: 10px 20px;
+    border-radius: 50px;
     box-shadow: inset 0 0 var(--orange);
-    transition: 0.3s;
+    cursor: pointer;
     font-family: Subtitle;
     height: 100%;
-    cursor: pointer;
-    border-radius: 50px;
+    padding: 10px 20px;
+    transition: 0.3s;
 }
 .header-info span:hover {
     box-shadow: inset 0 100px var(--orange);
     color: var(--purple);
 }
-
 .header img {
     height: 50px;
     margin: 0px 20px;
 }
 
+/* ********** Navbar ********** */
 .navbar {
     background-color: var(--grey);
 }
 
+/* ********** Hero section ********** */
 .hero {
-    height: 60vh;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    color: var(--blue2);
 }
-
+#hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: 20%;
+    animation: hero-section 10s infinite;
+    z-index: -1;
+}
+#contrast {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--purple);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+#title {
+    height: 80vh;
+}
+#title h1 {
+    font-family: Title;
+    font-weight: 100;
+    font-size: 6rem;
+    letter-spacing: 1.5rem;
+}
+#title h3 {
+    margin-top: -30px;
+    margin-bottom: 30px;
+    font-family: Subtitle;
+    font-weight: 100;
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
+}
+#title .button{
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:10%;
+}
+#title .button:before{
+    content:" Más información";
+}
+/* ********** Wrapper ********** */
 .wrapper {
     width: 70%;
     margin: auto;
+}
+
+/* ********** Animation ********** */
+@keyframes hero-section {
+    0% {
+        background-image: url("../images/alvaro-serrano-hjwKMkehBco-unsplash.jpg");
+    }
+    23% {
+        background-image: url("../images/alvaro-serrano-hjwKMkehBco-unsplash.jpg");
+    }
+    25% {
+        background-image: url("../images/hunters-race-MYbhN8KaaEc-unsplash.jpg");
+        transform: scale(100%);
+    }
+    48% {
+        background-image: url("../images/hunters-race-MYbhN8KaaEc-unsplash.jpg");
+        transform: scale(100%);
+    }
+    50% {
+        background-image: url("../images/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg");
+    }
+    73% {
+        background-image: url("../images/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg");
+    }
+    75% {
+        background-image: url("../images/scott-graham-5fNmWej4tAA-unsplash.jpg");
+    }
+    98% {
+        background-image: url("../images/scott-graham-5fNmWej4tAA-unsplash.jpg");
+    }
+    100% {
+        background-image: url("../images/alvaro-serrano-hjwKMkehBco-unsplash.jpg");
+    }
+}
+/* ********** Media Queries ********** */
+@media screen and (width <600px) {
+    #header-logo {
+        display: none;
+    }
+    .header {
+        justify-content: center;
+    }
+    .header-info {
+        width: 100vw;
+        justify-content: space-between;
+    }
+    #title h1 {
+        font-size: 1.5rem;
+    }
+    #title h3 {
+        margin-top:0px;
+        font-size: 0.8rem;
+    }
+    #title .button:before{
+        content:"";
+    }
+}
+@media screen and (width <300px) {
+    #header-logo,
+    .header-info {
+        display: none;
+    }
+    .header {
+        justify-content: center;
+    }
+    .header-info {
+        width: 100vw;
+        justify-content: space-between;
+    }
+    #title h1 {
+        font-size: 5vw;
+        letter-spacing:4vw;
+    }
+    #title h3 {
+        font-size: 3vw;
+        letter-spacing:3vw;
+    }
 }
