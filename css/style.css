@@ -137,8 +137,8 @@ h3 {
 }
 
 /* ********** Navbar ********** */
-.navbar {
-    display:flex;
+#navbar {
+    display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: center;
@@ -146,18 +146,45 @@ h3 {
     box-shadow: inset 0px 0px var(--orange);
     font-family: Subtitle;
     color: var(--blue2);
-    
 }
-.navbar a {
+#navbar a {
     text-align: center;
     padding: 10px 10px;
     transition: 0.5s;
     flex-grow: 1;
 }
-.navbar a:hover {
+#navbar a:hover {
     box-shadow: inset 0px -100px var(--orange);
-    color:var(--purple);
+    color: var(--purple);
     flex-grow: 2;
+}
+#mobile-menu {
+    display: none;
+    background-color: var(--grey);
+    box-shadow: inset 0px 0px var(--orange);
+    font-family: Subtitle;
+    color: var(--blue2);
+}
+#mobile-menu i {
+    text-align: center;
+    padding: 10px 30px;
+    transition: 0.5s;
+    flex-grow: 1;
+}
+#mobile-menu i:hover {
+    box-shadow: inset 0px -100px var(--orange);
+    color: var(--purple);
+    flex-grow: 2;
+}
+#nav .nav-items {
+    list-style: none;
+    text-align: left;
+    padding:0px 20px;
+    height: 0;
+    overflow: hidden;
+}
+#navigation:target .nav-items{
+    height: 150px;
 }
 
 /* ********** Hero section ********** */
@@ -401,6 +428,12 @@ h3 {
     #section6 p:nth-child(2n) {
         border-left: 3px solid var(--grey);
         padding: 0px 15px;
+    }
+    #navbar {
+        display: none;
+    }
+    #mobile-menu {
+        display: block;
     }
 }
 /* ********** <600px ********** */
