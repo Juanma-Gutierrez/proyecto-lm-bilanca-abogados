@@ -42,9 +42,22 @@
                 <a href=""> Contactar </a>
             </div>
 
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("nav-items");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+            </script>
             <nav id="mobile-menu">
                 <div class="control-menu">
-                    <a href="#navigation"
+                    <a
+                        href="javascript:void(0);"
+                        class="icon"
+                        onclick="myFunction()"
                         ><span>
                             <i
                                 id="burger-menu"
@@ -55,21 +68,33 @@
                     ></a>
                 </div>
             </nav>
-            <ul class="nav-items">
+            <ul id="nav-items" class="nav-items">
                 <li>
-                    <a href="">Bilanca Abogados</a>
+                    <a href="#section1"> Bilanca Abogados </a>
                 </li>
                 <li>
-                    <a href="">Tipos de despidos</a>
+                    <a href="#section2"> Tipos de despidos </a>
                 </li>
                 <li>
-                    <a href="">Información</a>
+                    <a href="#section3"> Información </a>
                 </li>
                 <li>
-                    <a href="">Despidos</a>
+                    <a href="#section4"> Despidos </a>
                 </li>
                 <li>
-                    <a href="">Tipos</a>
+                    <a href="#section5"> Tipos </a>
+                </li>
+                <li>
+                    <a href="#section6"> Servicios </a>
+                </li>
+                <li>
+                    <a href="#section7"> Consejos </a>
+                </li>
+                <li>
+                    <a href="#section8"> Quiénes somos </a>
+                </li>
+                <li>
+                    <a href=""> Contactar </a>
                 </li>
             </ul>
         </nav>

@@ -138,6 +138,7 @@ h3 {
 
 /* ********** Navbar ********** */
 #navbar {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -176,17 +177,27 @@ h3 {
     color: var(--purple);
     flex-grow: 2;
 }
-#nav .nav-items {
+#nav-items {
+    position: absolute;
+    display: none;
+    background-color: var(--grey);
+    box-shadow: inset 0px 0px var(--orange);
+    width: fit-content;
+    font-family: Subtitle;
+    color: var(--blue2);
     list-style: none;
     text-align: left;
-    padding:0px 20px;
-    height: 0;
     overflow: hidden;
-}
-#navigation:target .nav-items{
-    height: 150px;
+    z-index: 10;
 }
 
+#nav-items li {
+    padding: 5px 20px;
+}
+#nav-items li:hover {
+    background-color: var(--orange);
+    color: var(--purple);
+}
 /* ********** Hero section ********** */
 .hero {
     position: relative;
@@ -288,7 +299,7 @@ h3 {
 
     border: 1px solid var(--grey);
     border-radius: 5px;
-    box-shadow: 0px 10px 10px var(--grey);
+    box-shadow: 0px 0px 10px #0004;
     padding: 15px;
     margin: 5px 0px;
     background-color: var(--blue1);
@@ -296,7 +307,7 @@ h3 {
 }
 #section3 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 15px 15px var(--grey);
+    box-shadow: 0px 5px 15px #000a;
 }
 #section3 a * {
     transition: 0.1s;
