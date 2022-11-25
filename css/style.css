@@ -383,14 +383,58 @@ h3 {
     align-items: center;
     margin: 10px;
     border: 1px solid var(--grey);
+    box-shadow: 0 0px 10px #0002;
     border-radius: 5px;
     text-align: center;
 }
 #section8 .personal {
     width: 10vw;
     height: 10vw;
-    margin: 20px;
-    border-radius: 100px;
+    margin: 10px;
+}
+
+/* ********** CONTACTO ********** */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 50%;
+    margin: 20px auto;
+}
+.formulario label {
+    padding-top: 10px;
+    font-family: Subtitle;
+    color: var(--purple);
+}
+.formulario input,
+.formulario textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    color: var(--purple);
+}
+.formulario input:focus,
+.formulario textarea:focus {
+    border: 2px solid var(--grey);
+    background-color: var(--blue1);
+    outline:none;
+}
+#form-buttons {
+    display: inline;
+    text-align: center;
+    padding: 10px;
+}
+.formulario .button{
+    padding:5px 15px;
+}
+.formulario .reset{
+    background-color:var(--grey);
+    color:var(--blue1);
+}
+.formulario .reset:hover{
+    background-color:var(--purple);
+    color:var(--blue1);
 }
 
 /* ********** Animation ********** */
@@ -465,7 +509,7 @@ h3 {
         justify-content: space-between;
     }
     #title h1 {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
         line-height: 1.5rem;
         letter-spacing: 1rem;
     }
