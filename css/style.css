@@ -29,8 +29,8 @@ Proyecto 1er trimestre Lenguaje de Marcas
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
-    transition: 0.3s;
+    box-sizing: border-box;
+    transition: 0.2s;
 }
 
 /* ********** General ********** */
@@ -67,7 +67,7 @@ a {
 .title {
     color: var(--grey);
     text-align: center;
-    padding: 0px 20px 30px 20px;
+    margin: 30px 0px;
 }
 .title-text {
     font-size: 1.5rem;
@@ -82,6 +82,7 @@ a {
 .col2 {
     display: grid;
     grid-template-columns: 50% 50%;
+    gap: 20px;
 }
 .col4 {
     width: 100%;
@@ -93,7 +94,7 @@ a {
 p,
 h3 {
     font-family: Main;
-    line-height: 1.2rem;
+    line-height: 1.4rem;
     padding: 5px;
 }
 /* ********** Wrapper ********** */
@@ -202,7 +203,7 @@ h3 {
 }
 /* ********** Seccion 1 Abogado Laboralista  ********** */
 #section1 {
-    padding: 30px;
+    margin: 30px 0px;
 }
 .info {
     text-align: left;
@@ -223,10 +224,10 @@ h3 {
 /* ********** Seccion 2 Despidos ********** */
 #section2 {
     background-color: var(--blue2);
-    padding: 2% 5vw;
+    padding: 1px 5vw 20px 5vw;
 }
 #section2 .info {
-    padding: 0% 10%;
+    padding: 0% 5%;
 }
 
 /* ********** Seccion 3 cards ********** */
@@ -234,10 +235,9 @@ h3 {
     padding: 20px;
 }
 #section3 .card {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 
     border: 1px solid var(--grey);
     border-radius: 5px;
@@ -245,24 +245,89 @@ h3 {
     padding: 15px;
     margin: 5px 0px;
     background-color: var(--blue1);
-    color:var(--purple);
+    color: var(--purple);
 }
 #section3 .card:hover {
     transform: scale(1.05);
     box-shadow: 0px 15px 15px var(--grey);
 }
+#section3 a * {
+    transition: 0.1s;
+}
 #section3 .button {
     padding: 5px 20px;
 }
+#section3 .button:hover::after {
+    content: " Más información";
+}
 #section3 .card h3 {
     padding-top: 15px;
-    color:var(--orange);
+    color: var(--orange);
 }
 #section3 p {
     padding-bottom: 15px;
     text-align: center;
 }
-#section3 .cardinfo{
+
+/* ********** SECCIÓN 4 DESPIDOS ********** */
+
+/* ********** SECCIÓN 6 SERVICIOS ********** */
+#section6 {
+    background-color: var(--blue2);
+    margin: 20px 0px;
+    padding: 1px 20px 20px 20px;
+}
+#section6 p:first-child {
+    border-left: none;
+}
+#section6 p {
+    border-left: 3px solid var(--grey);
+    padding: 0px 15px;
+}
+
+/* ********** SECCIÓN 7 CONSEJOS ********** */
+#section7 {
+    width: 100%;
+    overflow-x: hidden;
+    margin: auto;
+    background-color: var(--purple);
+    color: var(--blue2);
+    padding: 1px 10% 30px 10%;
+}
+#section7 .title {
+    color: var(--blue1);
+}
+#section7 ul {
+    list-style: none;
+    margin-left: 25px;
+    margin-top: 5px;
+    list-style-image: url("../images/tick.png");
+}
+#section7 li {
+    padding: 10px 5px;
+    font-family: Main;
+    line-height: 1.5rem;
+}
+
+/* ********** SECCIÓN 8 QUIENES SOMOS ********** */
+#section8{
+    width: 80%;
+    margin:auto;
+}
+#section8 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    border:1px solid var(--grey);
+    border-radius: 5px;
+}
+#section8 .personal {
+    width: 10vw;
+    height: 10vw;
+    margin:20px;
+    border-radius: 100px;
 }
 
 /* ********** Animation ********** */
@@ -298,16 +363,28 @@ h3 {
     }
 }
 /* ********** Media Queries ********** */
+/* ********** <1000px ********** */
 @media screen and (width <1000px) {
     .col2 {
         grid-template-columns: 100%;
     }
-
     .col4 {
         grid-template-columns: 50% 50%;
     }
+    #section6 p {
+        border-left: none;
+        margin: 10px 0px;
+    }
+    #section6 p:nth-child(2n) {
+        border-left: 3px solid var(--grey);
+        padding: 0px 15px;
+    }
 }
+/* ********** <600px ********** */
 @media screen and (width <600px) {
+    .wrapper {
+        width: 90vw;
+    }
     #header-logo {
         display: none;
     }
@@ -340,12 +417,26 @@ h3 {
         padding: 0% 5%;
     }
     .col4 {
-        display:block;
+        display: block;
     }
-    #section3 .card{
-        margin:30px 0px;
+    #section3 .card {
+        margin: 30px 0px;
+    }
+    #section6 p:nth-child(2n) {
+        border-left: none;
+    }
+    #section7 {
+        width: 100%;
+        padding: 10px;
+    }
+    #section7 .title {
+        color: var(--blue1);
+    }
+    #section7 ul {
+        list-style: square;
     }
 }
+/* ********** <300px ********** */
 @media screen and (width <300px) {
     #header-logo,
     .header-info {
@@ -370,5 +461,4 @@ h3 {
     #section3 {
         padding: 5px;
     }
-
 }
