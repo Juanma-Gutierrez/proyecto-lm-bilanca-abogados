@@ -5,7 +5,7 @@ Proyecto 1er trimestre Lenguaje de Marcas
 :root {
     --purple: #28233e;
     --orange: #fe9000;
-    --blue1: ##00f6ed;
+    --blue1: #f3f2f8;
     --blue2: #cad8de;
     --grey: #5d737e;
 }
@@ -162,7 +162,7 @@ h3 {
 #mobile-menu {
     display: none;
     background-color: var(--grey);
-    box-shadow: inset 0px 0px var(--orange);
+    box-shadow: 10px 10px 10px #0004;
     font-family: Subtitle;
     color: var(--blue2);
 }
@@ -181,7 +181,7 @@ h3 {
     position: absolute;
     display: none;
     background-color: var(--grey);
-    box-shadow: inset 0px 0px var(--orange);
+    box-shadow: 10px 10px 10px #0004;
     width: fit-content;
     font-family: Subtitle;
     color: var(--blue2);
@@ -193,9 +193,11 @@ h3 {
 
 #nav-items li {
     padding: 5px 20px;
+    border-top: 1px solid #fff2;
 }
 #nav-items li:hover {
     background-color: var(--orange);
+    transform: scaleX(1.1);
     color: var(--purple);
 }
 /* ********** Hero section ********** */
