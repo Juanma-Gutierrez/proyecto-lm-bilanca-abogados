@@ -394,12 +394,18 @@ h3 {
 }
 
 /* ********** CONTACTO ********** */
+#section9{
+    background-color: var(--blue2);
+    padding:1px 20px 0px 20px;
+    margin:20px auto;
+    width: 50%;
+    border-radius: 5px;
+}
 .formulario {
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    width: 50%;
     margin: 20px auto;
 }
 .formulario label {
@@ -492,6 +498,9 @@ h3 {
     #mobile-menu {
         display: block;
     }
+    #section9{
+        width: 70%;
+    }
 }
 /* ********** <600px ********** */
 @media screen and (width <600px) {
@@ -551,6 +560,9 @@ h3 {
     #section8 .personal {
         width: 20vw;
         height: 20vw;
+    }
+    #section9{
+        width: 90%;
     }
 }
 /* ********** <300px ********** */
