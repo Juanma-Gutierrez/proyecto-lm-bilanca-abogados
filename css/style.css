@@ -31,6 +31,7 @@ Proyecto 1er trimestre Lenguaje de Marcas
     padding: 0;
     box-sizing: border-box;
     transition: 0.2s;
+    scroll-behavior: smooth;
 }
 
 /* ********** General ********** */
@@ -137,7 +138,26 @@ h3 {
 
 /* ********** Navbar ********** */
 .navbar {
+    display:flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
     background-color: var(--grey);
+    box-shadow: inset 0px 0px var(--orange);
+    font-family: Subtitle;
+    color: var(--blue2);
+    
+}
+.navbar a {
+    text-align: center;
+    padding: 10px 10px;
+    transition: 0.5s;
+    flex-grow: 1;
+}
+.navbar a:hover {
+    box-shadow: inset 0px -100px var(--orange);
+    color:var(--purple);
+    flex-grow: 2;
 }
 
 /* ********** Hero section ********** */
@@ -271,6 +291,8 @@ h3 {
 
 /* ********** SECCIÓN 4 DESPIDOS ********** */
 
+/* ********** SECCIÓN 5 TIPOS ********** */
+
 /* ********** SECCIÓN 6 SERVICIOS ********** */
 #section6 {
     background-color: var(--blue2);
@@ -281,7 +303,7 @@ h3 {
     border-left: none;
 }
 #section6 p {
-    border-left: 3px solid var(--grey);
+    border-left: 1px solid #0002;
     padding: 0px 15px;
 }
 
@@ -310,23 +332,24 @@ h3 {
 }
 
 /* ********** SECCIÓN 8 QUIENES SOMOS ********** */
-#section8{
+#section8 {
     width: 80%;
-    margin:auto;
+    margin: auto;
 }
 #section8 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 20px;
-    border:1px solid var(--grey);
+    margin: 10px;
+    border: 1px solid var(--grey);
     border-radius: 5px;
+    text-align: center;
 }
 #section8 .personal {
     width: 10vw;
     height: 10vw;
-    margin:20px;
+    margin: 20px;
     border-radius: 100px;
 }
 
@@ -434,6 +457,10 @@ h3 {
     }
     #section7 ul {
         list-style: square;
+    }
+    #section8 .personal {
+        width: 20vw;
+        height: 20vw;
     }
 }
 /* ********** <300px ********** */
