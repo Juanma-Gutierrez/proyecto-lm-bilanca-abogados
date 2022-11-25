@@ -443,6 +443,26 @@ h3 {
     color:var(--blue1);
 }
 
+/* ********** FOOTER ********** */
+footer{
+    background-color: var(--purple);
+    color:var(--blue1);
+    margin:auto;
+    padding:20px;
+}
+footer img{
+    width: 150px;
+}
+footer iframe{
+    border-radius: 5px;
+}
+.col3{
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 /* ********** Animation ********** */
 @keyframes hero-section {
     0% {
@@ -557,13 +577,21 @@ h3 {
     #section7 ul {
         list-style: square;
     }
-    #section8 .personal {
-        width: 20vw;
-        height: 20vw;
+    #section8{
+        width: 90vw;
+    }
+    #section8 .col4 {
+        display:grid;
+        grid-template-columns: 50% 50%;
+    }
+    #section8 .card {
+        margin:5px;
     }
     #section9{
         width: 90%;
     }
+    .col3{
+        grid-template-columns:100%;
 }
 /* ********** <300px ********** */
 @media screen and (width <300px) {

@@ -24,8 +24,14 @@
                 id="header-logo"
             />
             <div class="header-info">
-                <span>info@bilanca.com</span>
-                <span>951.555.123</span>
+                <span>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    info@bilanca.com</span
+                >
+                <span
+                    ><i class="fa fa-phone" aria-hidden="true"></i>
+                    951.555.123</span
+                >
             </div>
         </header>
 
@@ -39,7 +45,7 @@
                 <a href="#section6"> Servicios </a>
                 <a href="#section7"> Consejos </a>
                 <a href="#section8"> Quiénes somos </a>
-                <a href=""> Contactar </a>
+                <a href="#section9"> Contactar </a>
             </div>
 
             <script>
@@ -94,7 +100,7 @@
                     <a href="#section8"> Quiénes somos </a>
                 </li>
                 <li>
-                    <a href=""> Contactar </a>
+                    <a href="#section9"> Contactar </a>
                 </li>
             </ul>
         </nav>
@@ -238,7 +244,7 @@
                             </div>
                         </div>
                         <div class="centered">
-                            <a href="">
+                            <a href="#section9">
                                 <button class="button">
                                     <i
                                         class="fa fa-plus"
@@ -267,7 +273,7 @@
                             </div>
                         </div>
                         <div class="centered">
-                            <a href="">
+                            <a href="#section4">
                                 <button class="button">
                                     <i
                                         class="fa fa-plus"
@@ -295,7 +301,7 @@
                             </div>
                         </div>
                         <div class="centered">
-                            <a href="">
+                            <a href="#section6">
                                 <button class="button">
                                     <i
                                         class="fa fa-plus"
@@ -322,7 +328,7 @@
                             </div>
                         </div>
                         <div class="centered">
-                            <a href="">
+                            <a href="#section8">
                                 <button class="button">
                                     <i
                                         class="fa fa-plus"
@@ -578,18 +584,67 @@
                 <div>
                     <form action="" method="post" class="formulario">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre">
+                        <input type="text" name="nombre" id="nombre" />
                         <label for="email">Correo electrónico:</label>
-                        <input type="text" name="email" id="email">
+                        <input type="text" name="email" id="email" />
                         <label for="mensaje">Mensaje:</label>
-                        <textarea name="mensaje" id="mensaje" rows="5" cols="33"></textarea>
+                        <textarea
+                            name="mensaje"
+                            id="mensaje"
+                            rows="5"
+                            cols="33"
+                        ></textarea>
                         <div id="form-buttons">
-                            <button type="submit" class="button send"><i class="fa fa-envelope" aria-hidden="true"></i> Enviar</button>
-                            <button type="reset" class="button reset"><i class="fa fa-trash" aria-hidden="true"></i> Borrar</button>
+                            <button type="submit" class="button send">
+                                <i
+                                    class="fa fa-envelope"
+                                    aria-hidden="true"
+                                ></i>
+                                Enviar
+                            </button>
+                            <button type="reset" class="button reset">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                Borrar
+                            </button>
                         </div>
                     </form>
                 </div>
             </section>
         </div>
+        <footer>
+            <div class="col3">
+                <div>
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        info@bilanca.com
+                    </p>
+                    <p>
+                        <span
+                            ><i class="fa fa-phone" aria-hidden="true"></i>
+                            951.555.123</span
+                        >
+                    </p>
+                    <p>
+                        <span
+                            ><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            c/ Frederik Termann, s/n
+                        </span>
+                    </p>
+                    <p>29001 · PTA · Málaga</p>
+                </div>
+                <div><img src="./images/logoVertical.png" alt="" /></div>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1424.219248512686!2d-4.555141640747013!3d36.74022851091841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1d2ffe3a137%3A0xe095a3ea561debe2!2sC.%20Frederick%20Terman%2C%2029590%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1669396213192!5m2!1ses!2ses"
+                        width="300"
+                        height="200"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
