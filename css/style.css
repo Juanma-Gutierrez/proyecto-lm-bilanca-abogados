@@ -91,6 +91,7 @@ a {
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
     gap: 1.33%;
+    justify-items: center;
 }
 p,
 h3 {
@@ -98,6 +99,22 @@ h3 {
     line-height: 1.4rem;
     padding: 5px;
 }
+#to-up {
+    display: none;
+}
+#to-up i {
+    position: fixed;
+    z-index: 1000;
+    font-size: 3rem;
+    bottom: 3rem;
+    right: 3rem;
+    color: var(--orange);
+}
+#to-up i:hover {
+    color: var(--purple);
+    text-shadow: 0px 0px 15px var(--blue2);
+}
+
 /* ********** Wrapper ********** */
 .wrapper {
     width: 80%;
@@ -169,7 +186,6 @@ h3 {
 #mobile-menu i {
     text-align: center;
     padding: 10px 30px;
-    transition: 0.5s;
     flex-grow: 1;
 }
 #mobile-menu i:hover {
@@ -179,6 +195,7 @@ h3 {
 }
 #nav-items {
     position: absolute;
+
     display: none;
     background-color: var(--grey);
     box-shadow: 10px 10px 10px #0004;
@@ -284,7 +301,7 @@ h3 {
 /* ********** Seccion 2 Despidos ********** */
 #section2 {
     background-color: var(--blue2);
-    padding: 1px 5vw 20px 5vw;
+    padding: 1px 10vw 20px 10vw;
 }
 #section2 .info {
     padding: 0% 5%;
@@ -298,7 +315,6 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     border: 1px solid var(--grey);
     border-radius: 5px;
     box-shadow: 0px 0px 10px #0004;
@@ -354,7 +370,7 @@ h3 {
     margin: auto;
     background-color: var(--purple);
     color: var(--blue2);
-    padding: 1px 10% 30px 10%;
+    padding: 1px 10vw 30px 10vw;
 }
 #section7 .title {
     color: var(--blue1);
@@ -394,10 +410,10 @@ h3 {
 }
 
 /* ********** CONTACTO ********** */
-#section9{
+#section9 {
     background-color: var(--blue2);
-    padding:1px 20px 0px 20px;
-    margin:20px auto;
+    padding: 1px 20px 0px 20px;
+    margin: 20px auto;
     width: 50%;
     border-radius: 5px;
 }
@@ -424,44 +440,62 @@ h3 {
 .formulario textarea:focus {
     border: 2px solid var(--grey);
     background-color: var(--blue1);
-    outline:none;
+    outline: none;
 }
 #form-buttons {
     display: inline;
     text-align: center;
     padding: 10px;
 }
-.formulario .button{
-    padding:5px 15px;
+.formulario .button {
+    padding: 5px 15px;
 }
-.formulario .reset{
-    background-color:var(--grey);
-    color:var(--blue1);
+.formulario .reset {
+    background-color: var(--grey);
+    color: var(--blue1);
 }
-.formulario .reset:hover{
-    background-color:var(--purple);
-    color:var(--blue1);
+.formulario .reset:hover {
+    background-color: var(--purple);
+    color: var(--blue1);
 }
 
 /* ********** FOOTER ********** */
-footer{
+footer {
     background-color: var(--purple);
-    color:var(--blue1);
-    margin:auto;
-    padding:20px;
+    color: var(--blue1);
+    margin: auto;
+    padding: 20px;
+    transition: 0.1s;
 }
-footer img{
+footer img {
     width: 150px;
 }
-footer iframe{
+footer iframe {
     border-radius: 5px;
 }
-.col3{
-    display:grid;
-    grid-template-columns: 33% 33% 33%;
+.col3 {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-areas: "address rrss map";
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap:20px;
+}
+.rrss {
+    font-size: 2rem;
+}
+footer a:hover {
+    color: var(--orange);
+}
+#address{
+    grid-area: address;
+}
+#rrss{
+    grid-area: rrss;
+}
+#map{
+    grid-area: map;
 }
 /* ********** Animation ********** */
 @keyframes hero-section {
@@ -518,8 +552,16 @@ footer iframe{
     #mobile-menu {
         display: block;
     }
-    #section9{
+    #section8 .personal {
+        width: 25vw;
+        height: 25vw;
+    }
+    #section9 {
         width: 70%;
+    }
+    .col3 {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "rrss address" "map map";
     }
 }
 /* ********** <600px ********** */
@@ -577,21 +619,27 @@ footer iframe{
     #section7 ul {
         list-style: square;
     }
-    #section8{
+    #section8 {
         width: 90vw;
     }
     #section8 .col4 {
-        display:grid;
+        display: grid;
         grid-template-columns: 50% 50%;
     }
     #section8 .card {
-        margin:5px;
+        margin: 5px;
     }
-    #section9{
+    #section8 .personal {
+        width: 30vw;
+        height: 30vw;
+    }
+    #section9 {
         width: 90%;
     }
-    .col3{
-        grid-template-columns:100%;
+    .col3 {
+        grid-template-columns: 100%;
+        grid-template-areas: "rrss" "address" "map";
+    }
 }
 /* ********** <300px ********** */
 @media screen and (width <300px) {
@@ -617,5 +665,9 @@ footer iframe{
     }
     #section3 {
         padding: 5px;
+    }
+    footer iframe {
+        width: 90vw;
+        height: 40vh;
     }
 }

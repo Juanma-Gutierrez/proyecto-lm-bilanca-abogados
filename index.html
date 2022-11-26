@@ -14,24 +14,29 @@
             href="./images/favicon.png"
             type="image/x-icon"
         />
+        <script src="js/script.js"></script>
         <title>Bilanca Abogados</title>
     </head>
     <body>
-        <header class="header">
+        <header id="header" class="header">
             <img
                 src="./images/logoHorizontal.png"
                 alt="Logotipo Bilanca Abogados"
                 id="header-logo"
             />
             <div class="header-info">
-                <span>
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    info@bilanca.com</span
-                >
-                <span
-                    ><i class="fa fa-phone" aria-hidden="true"></i>
-                    951.555.123</span
-                >
+                <a href="mailto:info@bilanca.com">
+                    <span>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        info@bilanca.com</span
+                    >
+                </a>
+                <a href="tel:951555123">
+                    <span
+                        ><i class="fa fa-phone" aria-hidden="true"></i>
+                        951.555.123</span
+                    >
+                </a>
             </div>
         </header>
 
@@ -45,25 +50,12 @@
                 <a href="#section6"> Servicios </a>
                 <a href="#section7"> Consejos </a>
                 <a href="#section8"> Quiénes somos </a>
-                <a href="#section9"> Contactar </a>
+                <a href="#section9"> Contacto </a>
             </div>
 
-            <script>
-                function myFunction() {
-                    var x = document.getElementById("nav-items");
-                    if (x.style.display === "block") {
-                        x.style.display = "none";
-                    } else {
-                        x.style.display = "block";
-                    }
-                }
-            </script>
             <nav id="mobile-menu">
                 <div class="control-menu">
-                    <a
-                        href="javascript:void(0);"
-                        class="icon"
-                        onclick="myFunction()"
+                    <a href="javascript:void(0);" class="icon"
                         ><span>
                             <i
                                 id="burger-menu"
@@ -100,7 +92,7 @@
                     <a href="#section8"> Quiénes somos </a>
                 </li>
                 <li>
-                    <a href="#section9"> Contactar </a>
+                    <a href="#section9"> Contacto </a>
                 </li>
             </ul>
         </nav>
@@ -117,6 +109,11 @@
                 ></a>
             </div>
         </section>
+        <div id="to-up">
+            <a href="#header">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
         <div class="wrapper">
             <section id="section1">
                 <div class="title">
@@ -613,16 +610,20 @@
         </div>
         <footer>
             <div class="col3">
-                <div>
+                <div id="address">
                     <p>
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        info@bilanca.com
+                        <a href="mailto:info@bilanca.com">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            info@bilanca.com
+                        </a>
                     </p>
                     <p>
-                        <span
-                            ><i class="fa fa-phone" aria-hidden="true"></i>
-                            951.555.123</span
-                        >
+                        <a href="tel:951555123">
+                            <span
+                                ><i class="fa fa-phone" aria-hidden="true"></i>
+                                951.555.123</span
+                            >
+                        </a>
                     </p>
                     <p>
                         <span
@@ -632,8 +633,27 @@
                     </p>
                     <p>29001 · PTA · Málaga</p>
                 </div>
-                <div><img src="./images/logoVertical.png" alt="" /></div>
-                <div>
+                <div id="rrss" class="centered">
+                    <img src="./images/logoVertical.png" alt="" />
+                    <div class="rrss">
+                        <a href="https://facebook.com">
+                            <i
+                                class="fa fa-facebook-official"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+                        <a href="https://twitter.com">
+                            <i
+                                class="fa fa-twitter-square"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+                        <a href="https://instagram.com">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1424.219248512686!2d-4.555141640747013!3d36.74022851091841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1d2ffe3a137%3A0xe095a3ea561debe2!2sC.%20Frederick%20Terman%2C%2029590%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1669396213192!5m2!1ses!2ses"
                         width="300"
