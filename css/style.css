@@ -408,6 +408,9 @@ h3 {
     height: 10vw;
     margin: 10px;
 }
+#section8 .card-info{
+    padding:20px;
+}
 
 /* ********** CONTACTO ********** */
 #section9 {
