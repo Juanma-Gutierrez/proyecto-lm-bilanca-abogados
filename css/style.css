@@ -106,8 +106,8 @@ h3 {
     position: fixed;
     z-index: 1000;
     font-size: 3rem;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 2rem;
+    right: 2rem;
     color: var(--orange);
 }
 #to-up i:hover {
@@ -408,8 +408,8 @@ h3 {
     height: 10vw;
     margin: 10px;
 }
-#section8 .card-info{
-    padding:20px;
+#section8 .card-info {
+    padding: 20px;
 }
 
 /* ********** CONTACTO ********** */
@@ -446,7 +446,11 @@ h3 {
     outline: none;
 }
 #form-buttons {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     text-align: center;
     padding: 10px;
 }
@@ -476,14 +480,18 @@ footer img {
 footer iframe {
     border-radius: 5px;
 }
-.col3 {
+.col4-footer {
     display: grid;
-    grid-template-columns: 40% 20% 40%;
-    grid-template-areas: "address rrss map";
+    grid-template-columns: 35% 20% 20% 25%;
+    grid-template-areas: "map address info rrss";
     justify-content: center;
+    justify-items: center;
     align-items: center;
     text-align: center;
-    gap:20px;
+    gap: 20px;
+}
+footer p {
+    line-height: 1rem;
 }
 .rrss {
     font-size: 2rem;
@@ -491,14 +499,32 @@ footer iframe {
 footer a:hover {
     color: var(--orange);
 }
-#address{
+#address {
     grid-area: address;
 }
-#rrss{
+#rrss {
     grid-area: rrss;
 }
-#map{
+#map {
     grid-area: map;
+}
+#info-footer {
+    grid-area: info;
+}
+#info-footer {
+    width: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px 0px;
+}
+#designer {
+    width: 50%;
+    color: var(--grey);
+    text-align: center;
+    padding: 5px 0px;
+    margin: auto;
 }
 /* ********** Animation ********** */
 @keyframes hero-section {
@@ -562,10 +588,11 @@ footer a:hover {
     #section9 {
         width: 70%;
     }
-    .col3 {
+    .col4-footer {
         grid-template-columns: 50% 50%;
-        grid-template-areas: "rrss address" "map map";
+        grid-template-areas: "address rrss" "map info";
     }
+
 }
 /* ********** <600px ********** */
 @media screen and (width <600px) {
@@ -639,9 +666,9 @@ footer a:hover {
     #section9 {
         width: 90%;
     }
-    .col3 {
+    .col4-footer {
         grid-template-columns: 100%;
-        grid-template-areas: "rrss" "address" "map";
+        grid-template-areas: "rrss" "address" "info" "map";
     }
 }
 /* ********** <300px ********** */
